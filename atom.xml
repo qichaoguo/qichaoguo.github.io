@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-05T10:35:41.095Z</updated>
+    <updated>2021-01-05T11:41:24.050Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -16,24 +16,33 @@
         <link href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
         </link>
         <updated>2021-01-05T10:19:54.000Z</updated>
-        <content type="html"><![CDATA[<p>一、查询服务是否开机启动<br>
-systemctl is-enabled xxx.service<br>
-二、开机运行服务<br>
-systemctl enable xxx.service<br>
-三、取消开机运行<br>
-systemctl disable xxx.service<br>
-四、启动服务</p>
-<p>systemctl start xxx.service<br>
-五、停止服务<br>
-systemctl stop xxx.service<br>
-六、重启服务<br>
-systemctl restart xxx.service<br>
-七、重新加载服务配置文件<br>
-systemctl reload xxx.service<br>
-八、查询服务运行状态<br>
-systemctl status xxx.service<br>
-九、显示启动失败的服务<br>
-systemctl --failed</p>
+        <content type="html"><![CDATA[<h2 id="一-查询服务是否开机启动">一、查询服务是否开机启动</h2>
+<pre><code>systemctl is-enabled xxx.service
+</code></pre>
+<h2 id="二-开机运行服务">二、开机运行服务</h2>
+<pre><code>systemctl enable xxx.service 
+</code></pre>
+<h2 id="三-取消开机运行">三、取消开机运行</h2>
+<pre><code>systemctl disable xxx.service 
+</code></pre>
+<h2 id="四-启动服务">四、启动服务</h2>
+<pre><code>systemctl start xxx.service 
+</code></pre>
+<h2 id="五-停止服务">五、停止服务</h2>
+<pre><code>systemctl stop xxx.service 
+</code></pre>
+<h2 id="六-重启服务">六、重启服务</h2>
+<pre><code>systemctl restart xxx.service 
+</code></pre>
+<h2 id="七-重新加载服务配置文件">七、重新加载服务配置文件</h2>
+<pre><code>systemctl reload xxx.service
+</code></pre>
+<h2 id="八-查询服务运行状态">八、查询服务运行状态</h2>
+<pre><code>systemctl status xxx.service 
+</code></pre>
+<h2 id="九-显示启动失败的服务">九、显示启动失败的服务</h2>
+<pre><code>systemctl --failed 
+</code></pre>
 ]]></content>
     </entry>
     <entry>

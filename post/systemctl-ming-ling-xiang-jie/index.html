@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1609842937117">
+<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1609846477416">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://qichaoguo.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1609842937117" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1609846477416" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Gridea</h1>
       </div>
@@ -33,7 +33,22 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8">一、查询服务是否开机启动</a></li>
+<li><a href="#%E4%BA%8C-%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1">二、开机运行服务</a></li>
+<li><a href="#%E4%B8%89-%E5%8F%96%E6%B6%88%E5%BC%80%E6%9C%BA%E8%BF%90%E8%A1%8C">三、取消开机运行</a></li>
+<li><a href="#%E5%9B%9B-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1">四、启动服务</a></li>
+<li><a href="#%E4%BA%94-%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1">五、停止服务</a></li>
+<li><a href="#%E5%85%AD-%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1">六、重启服务</a></li>
+<li><a href="#%E4%B8%83-%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">七、重新加载服务配置文件</a></li>
+<li><a href="#%E5%85%AB-%E6%9F%A5%E8%AF%A2%E6%9C%8D%E5%8A%A1%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81">八、查询服务运行状态</a></li>
+<li><a href="#%E4%B9%9D-%E6%98%BE%E7%A4%BA%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%9C%8D%E5%8A%A1">九、显示启动失败的服务</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -84,24 +99,33 @@
         </div>
         
         <div class="post-content yue">
-          <p>一、查询服务是否开机启动<br>
-systemctl is-enabled xxx.service<br>
-二、开机运行服务<br>
-systemctl enable xxx.service<br>
-三、取消开机运行<br>
-systemctl disable xxx.service<br>
-四、启动服务</p>
-<p>systemctl start xxx.service<br>
-五、停止服务<br>
-systemctl stop xxx.service<br>
-六、重启服务<br>
-systemctl restart xxx.service<br>
-七、重新加载服务配置文件<br>
-systemctl reload xxx.service<br>
-八、查询服务运行状态<br>
-systemctl status xxx.service<br>
-九、显示启动失败的服务<br>
-systemctl --failed</p>
+          <h2 id="一-查询服务是否开机启动">一、查询服务是否开机启动</h2>
+<pre><code>systemctl is-enabled xxx.service
+</code></pre>
+<h2 id="二-开机运行服务">二、开机运行服务</h2>
+<pre><code>systemctl enable xxx.service 
+</code></pre>
+<h2 id="三-取消开机运行">三、取消开机运行</h2>
+<pre><code>systemctl disable xxx.service 
+</code></pre>
+<h2 id="四-启动服务">四、启动服务</h2>
+<pre><code>systemctl start xxx.service 
+</code></pre>
+<h2 id="五-停止服务">五、停止服务</h2>
+<pre><code>systemctl stop xxx.service 
+</code></pre>
+<h2 id="六-重启服务">六、重启服务</h2>
+<pre><code>systemctl restart xxx.service 
+</code></pre>
+<h2 id="七-重新加载服务配置文件">七、重新加载服务配置文件</h2>
+<pre><code>systemctl reload xxx.service
+</code></pre>
+<h2 id="八-查询服务运行状态">八、查询服务运行状态</h2>
+<pre><code>systemctl status xxx.service 
+</code></pre>
+<h2 id="九-显示启动失败的服务">九、显示启动失败的服务</h2>
+<pre><code>systemctl --failed 
+</code></pre>
 
         </div>
 
