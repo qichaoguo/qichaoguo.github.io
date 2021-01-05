@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-01-05T10:17:24.188Z</updated>
+    <updated>2021-01-05T10:20:17.267Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://qichaoguo.github.io/images/avatar.png</logo>
     <icon>https://qichaoguo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[systemctl命令详解]]></title>
+        <id>https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/</id>
+        <link href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
+        </link>
+        <updated>2021-01-05T10:19:54.000Z</updated>
+        <content type="html"><![CDATA[<p>一、查询服务是否开机启动<br>
+systemctl is-enabled xxx.service<br>
+二、开机运行服务<br>
+systemctl enable xxx.service<br>
+三、取消开机运行<br>
+systemctl disable xxx.service<br>
+四、启动服务</p>
+<p>systemctl start xxx.service<br>
+五、停止服务<br>
+systemctl stop xxx.service<br>
+六、重启服务<br>
+systemctl restart xxx.service<br>
+七、重新加载服务配置文件<br>
+systemctl reload xxx.service<br>
+八、查询服务运行状态<br>
+systemctl status xxx.service<br>
+九、显示启动失败的服务<br>
+systemctl --failed</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://qichaoguo.github.io/post/hello-gridea/</id>
