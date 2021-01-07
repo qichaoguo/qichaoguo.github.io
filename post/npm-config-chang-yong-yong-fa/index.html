@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -30,30 +30,23 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            Stay hungry，Stay foolish
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F">设置国内镜像</a></li>
+<li><a href="#%E5%9C%A8%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">在编辑器中打开配置文件</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">获取配置信息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -97,48 +90,54 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="ri-article-line"></i>
-          最新文章
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">npm-config用法整理</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-01-07 / 1 min read
+        </div>
         
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://qichaoguo.github.io/post/npm-config-chang-yong-yong-fa/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">npm-config用法整理</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-01-07 / 1 min read</div>
-    </div>
-  </section>
+        <div class="post-content yue">
+          <blockquote>
+<p>参考文献<br>
+<a href="https://docs.npmjs.com/cli/v6/commands/npm-config">npm官方</a></p>
+</blockquote>
+<h3 id="设置国内镜像">设置国内镜像</h3>
+<p>解决pnm卡顿问题</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org
+</code></pre>
+<h3 id="在编辑器中打开配置文件">在编辑器中打开配置文件</h3>
+<pre><code>npm config edit
+</code></pre>
+<h3 id="获取配置信息">获取配置信息</h3>
+<pre><code>npm config get key
+</code></pre>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-    <div class="content">
-      <a href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">systemctl命令详解</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-01-05 / 1 min read</div>
-    </div>
-  </section>
+        </div>
 
-        <div class="read-more">
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://qichaoguo.github.io/tag/fSJc_E0vP/">
+            <span class="flex-auto">NodeJS</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
+                <h3 class="post-title">
+                  systemctl命令详解
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+
       </div>
     </div>
 

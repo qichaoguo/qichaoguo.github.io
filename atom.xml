@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-05T12:39:49.101Z</updated>
+    <updated>2021-01-07T04:13:13.003Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://qichaoguo.github.io/images/avatar.png</logo>
     <icon>https://qichaoguo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 根号二</rights>
+    <entry>
+        <title type="html"><![CDATA[npm-config用法整理]]></title>
+        <id>https://qichaoguo.github.io/post/npm-config-chang-yong-yong-fa/</id>
+        <link href="https://qichaoguo.github.io/post/npm-config-chang-yong-yong-fa/">
+        </link>
+        <updated>2021-01-07T04:04:40.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>参考文献<br>
+<a href="https://docs.npmjs.com/cli/v6/commands/npm-config">npm官方</a></p>
+</blockquote>
+<h3 id="设置国内镜像">设置国内镜像</h3>
+<p>解决pnm卡顿问题</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org
+</code></pre>
+<h3 id="在编辑器中打开配置文件">在编辑器中打开配置文件</h3>
+<pre><code>npm config edit
+</code></pre>
+<h3 id="获取配置信息">获取配置信息</h3>
+<pre><code>npm config get key
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[systemctl命令详解]]></title>
         <id>https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/</id>
