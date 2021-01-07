@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-07T04:13:13.003Z</updated>
+    <updated>2021-01-07T04:15:57.642Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -20,14 +20,14 @@
 <p>参考文献<br>
 <a href="https://docs.npmjs.com/cli/v6/commands/npm-config">npm官方</a></p>
 </blockquote>
-<h3 id="设置国内镜像">设置国内镜像</h3>
+<h3 id="一-设置国内镜像">一、设置国内镜像</h3>
 <p>解决pnm卡顿问题</p>
 <pre><code>npm config set registry https://registry.npm.taobao.org
 </code></pre>
-<h3 id="在编辑器中打开配置文件">在编辑器中打开配置文件</h3>
+<h3 id="二-在编辑器中打开配置文件">二、在编辑器中打开配置文件</h3>
 <pre><code>npm config edit
 </code></pre>
-<h3 id="获取配置信息">获取配置信息</h3>
+<h3 id="三-获取配置信息">三、获取配置信息</h3>
 <pre><code>npm config get key
 </code></pre>
 ]]></content>
@@ -38,31 +38,31 @@
         <link href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
         </link>
         <updated>2021-01-05T10:19:54.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="一-查询服务是否开机启动">一、查询服务是否开机启动</h2>
+        <content type="html"><![CDATA[<h3 id="一-查询服务是否开机启动">一、查询服务是否开机启动</h3>
 <pre><code>systemctl is-enabled xxx.service
 </code></pre>
-<h2 id="二-开机运行服务">二、开机运行服务</h2>
+<h3 id="二-开机运行服务">二、开机运行服务</h3>
 <pre><code>systemctl enable xxx.service 
 </code></pre>
-<h2 id="三-取消开机运行">三、取消开机运行</h2>
+<h3 id="三-取消开机运行">三、取消开机运行</h3>
 <pre><code>systemctl disable xxx.service 
 </code></pre>
-<h2 id="四-启动服务">四、启动服务</h2>
+<h3 id="四-启动服务">四、启动服务</h3>
 <pre><code>systemctl start xxx.service 
 </code></pre>
-<h2 id="五-停止服务">五、停止服务</h2>
+<h3 id="五-停止服务">五、停止服务</h3>
 <pre><code>systemctl stop xxx.service 
 </code></pre>
-<h2 id="六-重启服务">六、重启服务</h2>
+<h3 id="六-重启服务">六、重启服务</h3>
 <pre><code>systemctl restart xxx.service 
 </code></pre>
-<h2 id="七-重新加载服务配置文件">七、重新加载服务配置文件</h2>
+<h3 id="七-重新加载服务配置文件">七、重新加载服务配置文件</h3>
 <pre><code>systemctl reload xxx.service
 </code></pre>
-<h2 id="八-查询服务运行状态">八、查询服务运行状态</h2>
+<h3 id="八-查询服务运行状态">八、查询服务运行状态</h3>
 <pre><code>systemctl status xxx.service 
 </code></pre>
-<h2 id="九-显示启动失败的服务">九、显示启动失败的服务</h2>
+<h3 id="九-显示启动失败的服务">九、显示启动失败的服务</h3>
 <pre><code>systemctl --failed 
 </code></pre>
 ]]></content>
