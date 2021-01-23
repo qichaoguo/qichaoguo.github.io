@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-07T04:29:55.810Z</updated>
+    <updated>2021-01-23T07:11:25.070Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://qichaoguo.github.io/images/avatar.png</logo>
     <icon>https://qichaoguo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 根号二</rights>
+    <entry>
+        <title type="html"><![CDATA[常用工具代理命令]]></title>
+        <id>https://qichaoguo.github.io/post/chang-yong-gong-ju-dai-li-she-zhi-yu-qu-xiao/</id>
+        <link href="https://qichaoguo.github.io/post/chang-yong-gong-ju-dai-li-she-zhi-yu-qu-xiao/">
+        </link>
+        <updated>2021-01-17T03:17:31.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="git">git</h3>
+<pre><code>git config --global http.proxy http://127.0.0.1:1080
+
+
+git config --global https.proxy https://127.0.0.1:1080
+
+
+git config --global --unset http.proxy
+
+
+git config --global --unset https.proxy
+</code></pre>
+<h3 id="npm">npm</h3>
+<pre><code>npm config set proxy=http://127.0.0.1:1080
+
+npm config set https-proxy=https://127.0.0.1:1080
+
+npm config set registry=http://registry.npmjs.org
+
+npm config delete proxy
+
+npm config delete https-proxy
+
+//npm使用淘宝镜像进行install
+npm install --registry=https://registry.npm.taobao.org
+
+//npm设置淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+
+//npm删除镜像
+npm config delete registry
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[npm-config用法整理]]></title>
         <id>https://qichaoguo.github.io/post/npm-config-chang-yong-yong-fa/</id>

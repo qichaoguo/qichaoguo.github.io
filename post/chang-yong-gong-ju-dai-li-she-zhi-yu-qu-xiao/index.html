@@ -36,10 +36,12 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li>
+<ul>
+<li><a href="#git">git</a></li>
+<li><a href="#npm">npm</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -88,22 +90,45 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">关于</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">常用工具代理命令</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-01-25 / 1 min read
+          2021-01-17 / 1 min read
         </div>
         
         <div class="post-content yue">
-          <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>记录时光、记录生活</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>是启超呀！</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>爱生活</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
+          <h3 id="git">git</h3>
+<pre><code>git config --global http.proxy http://127.0.0.1:1080
+
+
+git config --global https.proxy https://127.0.0.1:1080
+
+
+git config --global --unset http.proxy
+
+
+git config --global --unset https.proxy
+</code></pre>
+<h3 id="npm">npm</h3>
+<pre><code>npm config set proxy=http://127.0.0.1:1080
+
+npm config set https-proxy=https://127.0.0.1:1080
+
+npm config set registry=http://registry.npmjs.org
+
+npm config delete proxy
+
+npm config delete https-proxy
+
+//npm使用淘宝镜像进行install
+npm install --registry=https://registry.npm.taobao.org
+
+//npm设置淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+
+//npm删除镜像
+npm config delete registry
+
+</code></pre>
 
         </div>
 
@@ -113,6 +138,15 @@
         <div class="flex justify-between py-8">
           
 
+          
+            <div class="next-post">
+              <a href="https://qichaoguo.github.io/post/npm-config-chang-yong-yong-fa/">
+                <h3 class="post-title">
+                  npm-config用法整理
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
