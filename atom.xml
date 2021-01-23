@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-23T07:11:25.070Z</updated>
+    <updated>2021-01-23T07:49:05.101Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://qichaoguo.github.io/images/avatar.png</logo>
     <icon>https://qichaoguo.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 根号二</rights>
+    <entry>
+        <title type="html"><![CDATA[npm 安装 electron 依赖]]></title>
+        <id>https://qichaoguo.github.io/post/npm-an-zhuang-electron-yi-lai/</id>
+        <link href="https://qichaoguo.github.io/post/npm-an-zhuang-electron-yi-lai/">
+        </link>
+        <updated>2021-01-23T07:30:03.000Z</updated>
+        <content type="html"><![CDATA[<p>1.修改npm配置</p>
+<pre><code>npm config edit
+</code></pre>
+<p>2.在打开的文件中增加下面一行配置，然后保存关闭</p>
+<pre><code>electron_mirror=https://npm.taobao.org/mirrors/electron/
+</code></pre>
+<p>3.重新下载包</p>
+<pre><code>npm i --save-dev electron
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[常用工具代理命令]]></title>
         <id>https://qichaoguo.github.io/post/chang-yong-gong-ju-dai-li-she-zhi-yu-qu-xiao/</id>
