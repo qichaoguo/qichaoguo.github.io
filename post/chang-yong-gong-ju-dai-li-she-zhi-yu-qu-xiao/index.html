@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>根号二</title>
 <meta name="description" content="Stay hungry，Stay foolish" />
-<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1611388142547">
+<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1611401669087">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://qichaoguo.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1611388142547" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1611401669087" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">根号二</h1>
       </div>
@@ -40,6 +40,7 @@
 <ul>
 <li><a href="#git">git</a></li>
 <li><a href="#npm">npm</a></li>
+<li><a href="#github%E5%9B%BD%E5%86%85mirror%E5%8A%A0%E9%80%9F">Github国内mirror加速</a></li>
 </ul>
 </li>
 </ul>
@@ -92,7 +93,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">常用工具代理命令</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-17 / 1 min read
+          2021-01-17 / 2 min read
         </div>
         
         <div class="post-content yue">
@@ -128,6 +129,22 @@ npm config set registry https://registry.npm.taobao.org
 //npm删除镜像
 npm config delete registry
 
+</code></pre>
+<h3 id="github国内mirror加速">Github国内mirror加速</h3>
+<p>fastgit.org<br>
+https://doc.fastgit.org/</p>
+<p>gitclone.com<br>
+https://gitclone.com/</p>
+<p>gitee<br>
+https://gitee.com/mirrors</p>
+<p>cnpmjs.org<br>
+https://github.com.cnpmjs.org/</p>
+<p>免替换方法</p>
+<pre><code>git config --global url.&quot;https://hub.fastgit.org&quot;.insteadOf https://github.com
+//查看git配置信息
+git config --global --list
+//取消设置
+git config --global --unset url.https://github.com/.insteadof
 </code></pre>
 
         </div>
