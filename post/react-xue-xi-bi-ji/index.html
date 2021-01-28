@@ -36,11 +36,15 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li>
+<li><a href="#react%E7%AE%80%E4%BB%8B">React简介</a>
 <ul>
-<li><a href="#%E4%B8%80-%E8%AE%BE%E7%BD%AE%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F">一、设置国内镜像</a></li>
-<li><a href="#%E4%BA%8C-%E5%9C%A8%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">二、在编辑器中打开配置文件</a></li>
-<li><a href="#%E4%B8%89-%E8%8E%B7%E5%8F%96%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">三、获取配置信息</a></li>
+<li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
+<li><a href="#%E9%9C%80%E6%8E%8C%E6%8F%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86">需掌握基础知识</a></li>
+</ul>
+</li>
+<li><a href="#hello-react">Hello React</a>
+<ul>
+<li><a href="#%E4%BE%8B%E5%AD%90">例子</a></li>
 </ul>
 </li>
 </ul>
@@ -91,53 +95,77 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">npm-config用法整理</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">React学习笔记</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-07 / 1 min read
+          2021-01-28 / 2 min read
         </div>
         
         <div class="post-content yue">
-          <blockquote>
-<p>参考文献<br>
-<a href="https://docs.npmjs.com/cli/v6/commands/npm-config">npm官方</a></p>
-</blockquote>
-<h3 id="一-设置国内镜像">一、设置国内镜像</h3>
-<p>解决pnm卡顿问题</p>
-<pre><code>npm config set registry https://registry.npm.taobao.org
-</code></pre>
-<h3 id="二-在编辑器中打开配置文件">二、在编辑器中打开配置文件</h3>
-<pre><code>npm config edit
-</code></pre>
-<h3 id="三-获取配置信息">三、获取配置信息</h3>
-<pre><code>npm config get key
+          <h2 id="react简介">React简介</h2>
+<p>react是一个将数据渲染成HTML视图的开源JavaScript库。</p>
+<p>由Facebook开发，开源。https://react.docschina.org/</p>
+<h3 id="特点">特点</h3>
+<ul>
+<li>组件化模式、声明式编程</li>
+<li>React Native 移动端开发</li>
+<li>虚拟DOM、Diffing算法</li>
+</ul>
+<h3 id="需掌握基础知识">需掌握基础知识</h3>
+<ul>
+<li>判断this的指向</li>
+<li>class(类)</li>
+<li>ES6语法规范</li>
+<li>npm包管理器</li>
+<li>原型、原型链</li>
+<li>数组常用方法</li>
+<li>模块化</li>
+</ul>
+<h2 id="hello-react">Hello React</h2>
+<h3 id="例子">例子</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;!-- 准备一个容器 --&gt;
+    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 引入react核心库 --&gt;
+    &lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;!-- 用于支持react操作dom --&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;!-- 用于将jsx转为js --&gt;
+    &lt;script src=&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/babel&quot;&gt;/*注意此处babel*/
+        //创建虚拟dom
+        const VDOM = &lt;h1&gt;hello react&lt;/h1&gt;
+        //渲染到页面中
+        ReactDOM.render(VDOM,document.getElementById('container'))
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
 </code></pre>
 
         </div>
 
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://qichaoguo.github.io/tag/fSJc_E0vP/">
-            <span class="flex-auto">NodeJS</span>
-          </a>
         
 
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://qichaoguo.github.io/post/chang-yong-gong-ju-dai-li-she-zhi-yu-qu-xiao/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  常用工具代理命令
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://qichaoguo.github.io/post/systemctl-ming-ling-xiang-jie/">
+              <a href="https://qichaoguo.github.io/post/npm-an-zhuang-electron-yi-lai/">
                 <h3 class="post-title">
-                  systemctl命令详解
+                  npm 安装 electron 依赖
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
