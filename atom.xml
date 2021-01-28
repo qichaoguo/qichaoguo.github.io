@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-28T03:01:16.970Z</updated>
+    <updated>2021-01-28T04:41:02.620Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -65,6 +65,66 @@
     &lt;/script&gt;
 &lt;/body&gt;
 
+&lt;/html&gt;
+</code></pre>
+<h2 id="jsx语法规则">jsx语法规则</h2>
+<p>https://react.docschina.org/docs/introducing-jsx.html</p>
+<ul>
+<li>定义虚拟DOM时，不要用引号</li>
+<li>标签中混入JS表达式时要用{}</li>
+<li>样式的类名制定不要用class，要用className</li>
+<li>内联样式，要用style={{key:value}}的形式去写</li>
+<li>只有一个根标签</li>
+<li>标签必须闭合</li>
+<li>标签首字母
+<ul>
+<li>若小写字母开头，则将标签转化为html中同名元素，若html中无该标签对应的同名元素，则报错。</li>
+<li>若大写字母开头，react就去渲染对应的组件，若组件没有定义，则报错。</li>
+</ul>
+</li>
+</ul>
+<h3 id="例子-2">例子</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        .h1{
+            font-size: large;
+            color: aqua;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;!-- 准备一个容器 --&gt;
+    &lt;div id=&quot;container&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 引入react核心库 --&gt;
+    &lt;script src=&quot;https://unpkg.com/react@16/umd/react.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;!-- 用于支持react操作dom --&gt;
+    &lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.development.js&quot; crossorigin&gt;&lt;/script&gt;
+    &lt;!-- 用于将jsx转为js --&gt;
+    &lt;script src=&quot;https://unpkg.com/babel-standalone@6/babel.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/babel&quot;&gt;/*注意此处babel*/
+        const text = 'Hello'
+        const vid = 'vdemoid'
+        //创建虚拟dom
+        const VDOM = (
+            &lt;div id={vid}&gt;
+                &lt;h1 className = &quot;h1&quot;&gt;{text}&lt;/h1&gt;
+                &lt;h1 style={{fontSize:'29px',color:'#666666'}}&gt;{text}&lt;/h1&gt;
+                &lt;input type=&quot;text&quot;  /&gt;
+            &lt;/div&gt;
+        )
+        //渲染到页面中
+        ReactDOM.render(VDOM,document.getElementById('container'))
+    &lt;/script&gt;
+&lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 ]]></content>
