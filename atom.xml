@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-31T11:34:20.213Z</updated>
+    <updated>2021-01-31T13:26:55.540Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -152,7 +152,7 @@
 <figure data-type="image" tabindex="1"><img src="https://qichaoguo.github.io//post-images/1612060001826.png" alt="" loading="lazy"></figure>
 <h3 id="变化点">变化点</h3>
 <figure data-type="image" tabindex="2"><img src="https://qichaoguo.github.io//post-images/1612060343707.png" alt="" loading="lazy"></figure>
-<h2 id="类的基本知识">类的基本知识</h2>
+<h2 id="类的基本知识javascript">类的基本知识(JavaScript)</h2>
 <p><strong>例子</strong></p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -346,6 +346,9 @@
 </li>
 <li>状态数据，不能直接修改或更新</li>
 </ul>
+<h2 id="展开语法javascript">展开语法(JavaScript)</h2>
+<p>MDN: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax</p>
+<h2 id="props">props</h2>
 ]]></content>
     </entry>
     <entry>
