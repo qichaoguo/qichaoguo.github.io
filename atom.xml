@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-31T03:36:39.536Z</updated>
+    <updated>2021-01-31T04:17:56.629Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://qichaoguo.github.io/post/react-xue-xi-bi-ji/">
         </link>
         <updated>2021-01-28T01:22:35.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="react简介">React简介</h2>
+        <content type="html"><![CDATA[<blockquote>
+<p>关于React的快餐式笔记，没有过多详细的解释，为了快速上手使用</p>
+</blockquote>
+<h2 id="react简介">React简介</h2>
 <p>react是一个将数据渲染成HTML视图的开源JavaScript库。</p>
 <p>由Facebook开发，开源。https://react.docschina.org/</p>
 <h3 id="特点">特点</h3>
@@ -220,6 +223,35 @@
         //函数式组件
         function MyComponent(){
             return &lt;h1&gt;hello&lt;/h1&gt;
+        }
+        ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="类式组件">类式组件</h3>
+<p><strong>例子</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        //创建类式组件
+        class MyComponent extends React.Component{
+            render(){
+                //render中的this是MyComponent的实例对象&lt;=&gt;MyComponent组件实例对象
+                console.log(this)
+                return &lt;h1&gt;Hello&lt;/h1&gt;
+            }
         }
         ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
     &lt;/script&gt;

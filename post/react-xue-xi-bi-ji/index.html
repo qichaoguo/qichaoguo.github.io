@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>根号二</title>
 <meta name="description" content="Stay hungry，Stay foolish" />
-<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612064197030">
+<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612066674015">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://qichaoguo.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612064197030" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612066674015" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">根号二</h1>
       </div>
@@ -62,6 +62,7 @@
 <li><a href="#react%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6">React中定义组件</a>
 <ul>
 <li><a href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6">函数式组件</a></li>
+<li><a href="#%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6">类式组件</a></li>
 </ul>
 </li>
 </ul>
@@ -114,11 +115,14 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">React学习笔记</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-28 / 7 min read
+          2021-01-28 / 8 min read
         </div>
         
         <div class="post-content yue">
-          <h2 id="react简介">React简介</h2>
+          <blockquote>
+<p>关于React的快餐式笔记，没有过多详细的解释，为了快速上手使用</p>
+</blockquote>
+<h2 id="react简介">React简介</h2>
 <p>react是一个将数据渲染成HTML视图的开源JavaScript库。</p>
 <p>由Facebook开发，开源。https://react.docschina.org/</p>
 <h3 id="特点">特点</h3>
@@ -322,6 +326,35 @@
         //函数式组件
         function MyComponent(){
             return &lt;h1&gt;hello&lt;/h1&gt;
+        }
+        ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="类式组件">类式组件</h3>
+<p><strong>例子</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        //创建类式组件
+        class MyComponent extends React.Component{
+            render(){
+                //render中的this是MyComponent的实例对象&lt;=&gt;MyComponent组件实例对象
+                console.log(this)
+                return &lt;h1&gt;Hello&lt;/h1&gt;
+            }
         }
         ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
     &lt;/script&gt;
