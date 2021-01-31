@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-31T02:33:40.055Z</updated>
+    <updated>2021-01-31T03:36:39.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -36,7 +36,7 @@
 <li>模块化</li>
 </ul>
 <h2 id="hello-react">Hello React</h2>
-<h3 id="例子">例子</h3>
+<p><strong>例子</strong></p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
@@ -83,7 +83,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="例子-2">例子</h3>
+<p><strong>例子</strong></p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
@@ -149,6 +149,83 @@
 <figure data-type="image" tabindex="1"><img src="https://qichaoguo.github.io//post-images/1612060001826.png" alt="" loading="lazy"></figure>
 <h3 id="变化点">变化点</h3>
 <figure data-type="image" tabindex="2"><img src="https://qichaoguo.github.io//post-images/1612060343707.png" alt="" loading="lazy"></figure>
+<h2 id="类的基本知识">类的基本知识</h2>
+<p><strong>例子</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        //创建一个Person类
+        class Person{
+            //构造器方法
+            constructor(name,age){
+                //构造器中的this是类的实例对象
+                this.name = name
+                this.age = age
+            }
+            //一般方法
+            speak(){
+                //speak方法放在类的原型对象中，供实例使用
+                //通过Person实例调用speak时，speak中的this就是Person实例
+                console.log(`我叫${this.name},我的年龄是${this.age}`)
+            }
+        }
+        const p1 = new Person('雄安',13)
+        p1.speak()
+        /*为什么说‘通过Person实例调用speak时，speak中的this就是Person实例’，
+        而不直接说‘speak中的this就是Person实例’
+        因为： **/
+        p1.speak.call({a:1,b:2})//call可以更改函数中this的指向
+
+        //继承
+        class Student extends Person{
+            constructor(name,age,grade){
+                super(name,age)
+                this.grade = grade
+            }
+            //重写
+            speak(){
+                console.log(`我叫${this.name},我的年龄是${this.age},我读${this.grade}`)
+            }
+        }
+        const s1 = new Student('小米',16,'六年级')
+        s1.speak()
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="react中定义组件">React中定义组件</h2>
+<h3 id="函数式组件">函数式组件</h3>
+<p><strong>例子</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        //函数式组件
+        function MyComponent(){
+            return &lt;h1&gt;hello&lt;/h1&gt;
+        }
+        ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 ]]></content>
     </entry>
     <entry>
