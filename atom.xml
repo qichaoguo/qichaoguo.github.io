@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qichaoguo.github.io/</id>
     <title>根号二</title>
-    <updated>2021-01-28T04:41:02.620Z</updated>
+    <updated>2021-01-31T02:16:40.032Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qichaoguo.github.io/"/>
     <link rel="self" href="https://qichaoguo.github.io/atom.xml"/>
@@ -127,6 +127,23 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+<h2 id="模块与组件-模块化与组件化的理解">模块与组件、模块化与组件化的理解</h2>
+<h3 id="模块">模块</h3>
+<ol>
+<li>理解：向外提供特定功能的js程序, 一般就是一个js文件</li>
+<li>为什么要拆成模块：随着业务逻辑增加，代码越来越多且复杂。</li>
+<li>作用：复用js, 简化js的编写, 提高js运行效率</li>
+</ol>
+<h3 id="组件">组件</h3>
+<ol>
+<li>理解：用来实现局部功能效果的代码和资源的集合(html/css/js/image等等)</li>
+<li>为什么要用组件： 一个界面的功能更复杂</li>
+<li>作用：复用编码, 简化项目编码, 提高运行效率</li>
+</ol>
+<h3 id="模块化">模块化</h3>
+<p>当应用的js都以模块来编写的, 这个应用就是一个模块化的应用</p>
+<h3 id="组件化">组件化</h3>
+<p>当应用是以多组件的方式实现, 这个应用就是一个组件化的应用</p>
 ]]></content>
     </entry>
     <entry>
