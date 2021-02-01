@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>根号二</title>
 <meta name="description" content="Stay hungry，Stay foolish" />
-<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612142722063">
+<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612155307421">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://qichaoguo.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612142722063" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612155307421" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">根号二</h1>
       </div>
@@ -73,7 +73,15 @@
 </ul>
 </li>
 <li><a href="#%E5%B1%95%E5%BC%80%E8%AF%AD%E6%B3%95javascript">展开语法(JavaScript)</a></li>
-<li><a href="#props">props</a></li>
+<li><a href="#props">props</a>
+<ul>
+<li><a href="#props%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">props基本使用</a></li>
+<li><a href="#%E5%AF%B9props%E8%BF%9B%E8%A1%8C%E9%99%90%E5%88%B6">对props进行限制</a></li>
+<li><a href="#props%E7%AE%80%E5%86%99">props简写</a></li>
+<li><a href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8props">函数式组件使用props</a></li>
+<li><a href="#props%E6%80%BB%E7%BB%93">props总结</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -124,7 +132,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">React学习笔记</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-28 / 11 min read
+          2021-01-28 / 18 min read
         </div>
         
         <div class="post-content yue">
@@ -461,6 +469,209 @@
 <h2 id="展开语法javascript">展开语法(JavaScript)</h2>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax" title="MDN文档">展开语法</a></p>
 <h2 id="props">props</h2>
+<h3 id="props基本使用">props基本使用</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;test1&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class MyComponent extends React.Component{
+            render(){
+                const {name,sex,age} = this.props
+                return (
+                    &lt;ul&gt;
+                        &lt;li&gt;姓名:{name}&lt;/li&gt;
+                        &lt;li&gt;性别:{sex}&lt;/li&gt;
+                        &lt;li&gt;年龄:{age+1}&lt;/li&gt;
+                    &lt;/ul&gt;
+                )
+            }
+        }
+        const info = {name:'小红',sex:'女',age:18};
+        //此处的展开运算符不同于原生中，因为有react+babel的缘故
+        ReactDOM.render(&lt;MyComponent {...info}/&gt;,document.getElementById('test'))
+        ReactDOM.render(&lt;MyComponent name='雄安' sex='男' age={13}/&gt;,document.getElementById('test1'))
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="对props进行限制">对props进行限制</h3>
+<p>引入prop-types</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;test1&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/prop-types.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class MyComponent extends React.Component{
+            render(){
+                console.log(this)
+                const {name,sex,age} = this.props
+                return (
+                    &lt;ul&gt;
+                        &lt;li&gt;姓名:{name}&lt;/li&gt;
+                        &lt;li&gt;性别:{sex}&lt;/li&gt;
+                        &lt;li&gt;年龄:{age+1}&lt;/li&gt;
+                    &lt;/ul&gt;
+                )
+            }
+        }
+        //进行类型，必要性的限制
+        MyComponent.propTypes = {
+            name:PropTypes.string.isRequired,//必传，字符串
+            sex:PropTypes.string,
+            age:PropTypes.number,//数值
+            speak:PropTypes.func,//限制speak为函数
+        }
+        //指定默认值
+        MyComponent.defaultProps = {
+            sex:'男',
+            age:18,
+        }
+        const info = {name:'小红',sex:'女',age:18};
+        //此处的展开运算符不同于原生中，因为有react+babel的缘故
+        ReactDOM.render(&lt;MyComponent {...info}/&gt;,document.getElementById('test'))
+        ReactDOM.render(&lt;MyComponent name='雄安' sex='男' age={13} speak={speak} /&gt;,document.getElementById('test1'))
+        function speak(){
+            console.log('hello')
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="props简写">props简写</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;test1&quot;&gt;&lt;/div&gt;
+    
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/prop-types.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class MyComponent extends React.Component{
+            //进行类型，必要性的限制
+            static propTypes = {
+                name:PropTypes.string.isRequired,//必传，字符串
+                sex:PropTypes.string,
+                age:PropTypes.number,//数值
+                speak:PropTypes.func,//限制speak为函数
+            }
+            static defaultProps = {
+                sex:'男',
+                age:18,
+            }
+            render(){
+                console.log(this)
+                const {name,sex,age} = this.props
+                return (
+                    &lt;ul&gt;
+                        &lt;li&gt;姓名:{name}&lt;/li&gt;
+                        &lt;li&gt;性别:{sex}&lt;/li&gt;
+                        &lt;li&gt;年龄:{age+1}&lt;/li&gt;
+                    &lt;/ul&gt;
+                )
+            }
+        }
+        
+        const info = {name:'小红',sex:'女',age:18};
+        //此处的展开运算符不同于原生中，因为有react+babel的缘故
+        ReactDOM.render(&lt;MyComponent {...info}/&gt;,document.getElementById('test'))
+        ReactDOM.render(&lt;MyComponent name='雄安' sex='男' age={13} speak={speak} /&gt;,document.getElementById('test1'))
+        function speak(){
+            console.log('hello')
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="函数式组件使用props">函数式组件使用props</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;test1&quot;&gt;&lt;/div&gt;
+
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/prop-types.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/babel&quot;&gt;
+        function MyComponent(props){
+            const {name,sex,age} = props
+            return (
+                    &lt;ul&gt;
+                        &lt;li&gt;姓名:{name}&lt;/li&gt;
+                        &lt;li&gt;性别:{sex}&lt;/li&gt;
+                        &lt;li&gt;年龄:{age+1}&lt;/li&gt;
+                    &lt;/ul&gt;
+                )
+        }
+        MyComponent.propTypes = {
+            name:PropTypes.string.isRequired,//必传，字符串
+            sex:PropTypes.string,
+            age:PropTypes.number,//数值
+            speak:PropTypes.func,//限制speak为函数
+        }
+        MyComponent.defaultProps = {
+            sex:'男',
+            age:18,
+        }
+        
+        const info = {name:'小红',sex:'女',age:18};
+        //此处的展开运算符不同于原生中，因为有react+babel的缘故
+        ReactDOM.render(&lt;MyComponent {...info}/&gt;,document.getElementById('test'))
+        ReactDOM.render(&lt;MyComponent name='雄安' sex='男' age={13} speak={speak} /&gt;,document.getElementById('test1'))
+        function speak(){
+            console.log('hello')
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="props总结">props总结</h3>
+<p>理解</p>
+<ol>
+<li>每个组件对象都会有props(properties的简写)属性</li>
+<li>组件标签的所有属性都保存在props中</li>
+</ol>
+<p>作用</p>
+<ol>
+<li>通过标签属性从组件外向组件内传递变化的数据</li>
+<li>注意: 组件内部不能修改props数据</li>
+</ol>
 
         </div>
 
