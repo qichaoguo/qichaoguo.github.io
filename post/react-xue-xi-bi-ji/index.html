@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>根号二</title>
 <meta name="description" content="Stay hungry，Stay foolish" />
-<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612257822464">
+<link rel="shortcut icon" href="https://qichaoguo.github.io//favicon.ico?v=1612442729704">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -23,7 +23,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://qichaoguo.github.io/">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612257822464" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://qichaoguo.github.io//images/avatar.png?v=1612442729704" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">根号二</h1>
       </div>
@@ -82,6 +82,11 @@
 <li><a href="#props%E6%80%BB%E7%BB%93">props总结</a></li>
 </ul>
 </li>
+<li><a href="#refs">refs</a>
+<ul>
+<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BD%A2%E5%BC%8F%E7%9A%84refs">字符串形式的refs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -132,7 +137,7 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">React学习笔记</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-01-28 / 18 min read
+          2021-01-28 / 19 min read
         </div>
         
         <div class="post-content yue">
@@ -672,6 +677,51 @@
 <li>通过标签属性从组件外向组件内传递变化的数据</li>
 <li>注意: 组件内部不能修改props数据</li>
 </ol>
+<h2 id="refs">refs</h2>
+<h3 id="字符串形式的refs">字符串形式的refs</h3>
+<p><strong>例子</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+
+    &lt;script src=&quot;../js/react.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/react-dom.development.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../js/babel.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/babel&quot;&gt;
+        class MyComponent extends React.Component{
+            showData = ()=&gt; {
+                const {input1 } = this.refs
+                alert(input1.value)
+            }
+            showData2 = ()=&gt;{
+                const {input2} = this.refs
+                alert(input2.value)
+            }
+            render(){
+                return (
+                    &lt;div&gt;
+                        &lt;input ref=&quot;input1&quot; type=&quot;text&quot; placeholder=&quot;点击按钮提示数据&quot; /&gt;&amp;nbsp;
+                        &lt;button onClick={this.showData}&gt;按钮&lt;/button&gt;&amp;nbsp;
+                        &lt;input ref=&quot;input2&quot; onBlur={this.showData2} type=&quot;text&quot; placeholder=&quot;失去焦点提示数据&quot;/&gt;
+                    &lt;/div&gt;
+                )
+            }
+        }
+
+        ReactDOM.render(&lt;MyComponent/&gt;,document.getElementById('test'))
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
         </div>
 
